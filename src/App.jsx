@@ -1,3 +1,14 @@
-export default function App() {
-  return <h1 className="text-3xl font-bold underline bg-red-400 text-blue-400">Hello world!</h1>;
+import { Outlet } from "react-router-dom";
+import {Routes, Route} from 'react-router-dom'
+import Home from "./pages/Home";
+import SearchPage from "./pages/SearchPage";
+
+ function App() {
+  return (
+    <Routes>
+    <Route path="/" element={<Home/>}></Route>
+    <Route path="search" element={<SearchPage/>}></Route>
+    </Routes>
+  );
 }
+export default App
